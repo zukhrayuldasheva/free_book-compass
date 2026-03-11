@@ -1,1 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
 
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="bb26e45a-bbd2-4f65-9512-44b5b9ca1d8f" type="text/javascript" async></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Compass</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RLF0NBYZE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-1RLF0NBYZE');
+  </script>
+
+  <!-- Подключение шрифтов и стилей -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- НАВИГАЦИЯ -->
+  <div class="navbar">
+    <div class="logo">
+      <i class="fas fa-compass"></i>
+      <span>Book Compass</span>
+    </div>
+    <div class="nav-links" id="navMenu">
+      <a href="#" data-page="home" class="nav-item active">Главная</a>
+      <a href="#" data-page="about" class="nav-item">О нас</a>
+      <a href="#" data-page="services" class="nav-item">Услуги</a>
+      <a href="#" data-page="blog" class="nav-item">Блог</a>
+      <a href="#" data-page="contact" class="nav-item">Контакты</a>
+    </div>
+    <div class="analytics-badge">
+      <i class="fas fa-chart-simple"></i> GA4: G-1RLF0NBYZE
+    </div>
+  </div>
+
+  <!-- КОНТЕЙНЕР ДЛЯ СТРАНИЦ -->
+  <div class="page-container">
+    <!-- ========== СТРАНИЦА 1: ГЛАВНАЯ ========== -->
+    <div id="page-home" class="page active-page">
+      <h1>Книжный компас: найди свою историю</h1>
+      <p class="section-sub">Персональные рекомендации для любого читателя</p>
+
+      <!-- Telegram Bot Card -->
+      <div class="book-card telegram-home-card" onclick="openTelegramBot()" style="background: white; border-radius: 2rem; padding: 1.8rem 1.5rem; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03); border: 1px solid #eceaff; margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <span style="font-size: 3rem;">🤖</span>
+          <div style="flex: 1;">
+            <h3 style="margin-bottom: 0.3rem;">Telegram бот @compass_books_bot</h3>
+            <p class="book-author">📚 70,000+ книг из легальных источников</p>
+            <p class="book-desc" style="margin-bottom: 0;">Project Gutenberg • Archive.org • Wikisource • Литрес Самиздат</p>
+          </div>
+          <span class="genre-tag" style="background: #4d3cb0; color: white; border: none;">Попробовать →</span>
+        </div>
+      </div>
+
+      <!-- Почему выбирают нас -->
+      <div class="why-choose-us">
+        <h2><i class="fas fa-star" style="color: #ffb83b;"></i> Почему выбирают нас</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="badge-icon"><i class="fas fa-brain"></i></div>
+            <h3>Умный алгоритм</h3>
+            <p>Искусственный интеллект подбирает книги по вашему настроению и любимым жанрам.</p>
+          </div>
+          <div class="card">
+            <div class="badge-icon"><i class="fas fa-users"></i></div>
+            <h3>5000+ довольных читателей</h3>
+            <p>Каждую неделю мы получаем благодарности за открытые новые миры.</p>
+          </div>
+          <div class="card">
+            <div class="badge-icon"><i class="fas fa-gem"></i></div>
+            <h3>Эксклюзивные подборки</h3>
+            <p>Только у нас — списки от известных писателей и критиков.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Популярные категории -->
+      <h2><i class="fas fa-fire"></i> Популярные категории</h2>
+      <div class="grid-4">
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Фэнтези'});">
+          <span style="font-size:3rem;">🔮</span>
+          <h3>Фэнтези</h3>
+          <span class="genre-tag">240 книг</span>
+        </div>
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Детективы'});">
+          <span style="font-size:3rem;">🕵️</span>
+          <h3>Детективы</h3>
+          <span class="genre-tag">180 книг</span>
+        </div>
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Научная фантастика'});">
+          <span style="font-size:3rem;">🚀</span>
+          <h3>Научная фантастика</h3>
+          <span class="genre-tag">156 книг</span>
+        </div>
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Романы'});">
+          <span style="font-size:3rem;">❤️</span>
+          <h3>Романы</h3>
+          <span class="genre-tag">320 книг</span>
+        </div>
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Исторические'});">
+          <span style="font-size:3rem;">📜</span>
+          <h3>Исторические</h3>
+          <span class="genre-tag">97 книг</span>
+        </div>
+        <div class="card category-card" onclick="gtag('event', 'category_click', {'category_name': 'Психология'});">
+          <span style="font-size:3rem;">🧠</span>
+          <h3>Психология</h3>
+          <span class="genre-tag">112 книг</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА 2: О НАС ========== -->
+    <div id="page-about" class="page">
+      <h1>О проекте Book Compass</h1>
+      
+      <!-- Telegram в стиле partner-block -->
+      <div class="partner-block telegram-partner" onclick="openTelegramBot()" style="cursor: pointer; background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%);">
+        <i class="fab fa-telegram"></i>
+        <strong>📱 Мы в Telegram!</strong> Наш бот @compass_books_bot уже в разработке — более 70,000 книг бесплатно
+      </div>
+
+      <div class="about-flex">
+        <div class="about-text">
+          <h2>Наша история</h2>
+          <p>Book Compass родился в 2020 году из любви к чтению и желания помочь людям не теряться в море книг. Основатели — двое филологов и data-инженер — создали алгоритм, который понимает вкусы читателя глубже обычных рекомендаций.</p>
+        </div>
+        <div class="about-quote">
+          <i class="fas fa-quote-right" style="font-size:3rem; opacity:0.4;"></i>
+          <p>«Мы верим, что каждая книга может стать событием, если найти к ней правильный подход».</p>
+        </div>
+      </div>
+
+      <hr>
+      <h2>Миссия и что мы предлагаем</h2>
+      <div class="mission-block">
+        <p class="mission-text">📌 <strong>Миссия:</strong> превратить поиск книги в увлекательное путешествие, а не рутину.</p>
+        <p>📖 Мы предлагаем: персонализированные подборки, ежедневные дайджесты новинок, доступ к закрытому книжному клубу и уникальные встречи с авторами.</p>
+      </div>
+
+      <h2>Наши ценности</h2>
+      <div class="grid-3">
+        <div class="card">
+          <i class="fas fa-heart" style="color:crimson; font-size:2rem; margin-bottom:1rem;"></i>
+          <h3>Любовь к тексту</h3>
+          <p>Мы читаем каждую книгу перед рекомендацией.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-scale-balanced" style="font-size:2rem; margin-bottom:1rem;"></i>
+          <h3>Честность</h3>
+          <p>Рекомендуем только то, что действительно стоит вашего времени.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-globe" style="font-size:2rem; margin-bottom:1rem;"></i>
+          <h3>Открытость</h3>
+          <p>Сообщество читателей, где каждый голос важен.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА 3: УСЛУГИ ========== -->
+    <div id="page-services" class="page">
+      <h1>Наши услуги</h1>
+      <p class="section-sub">Всё для того, чтобы чтение стало вашим лучшим привычкой</p>
+      
+      <div class="grid-3">
+        <!-- Telegram как первая услуга -->
+        <div class="card book-card" onclick="openTelegramBot()" style="cursor: pointer;">
+          <div class="badge-icon" style="color: #2AABEE;"><i class="fab fa-telegram"></i></div>
+          <h3>Telegram бот</h3>
+          <p class="book-author">Beta версия • Бесплатно</p>
+          <p class="book-desc">Доступ к 70,000+ книг из Project Gutenberg, Archive.org и других легальных источников. Поиск по жанрам и авторам.</p>
+          <small>@compass_books_bot →</small>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-magic badge-icon"></i>
+          <h3>Персональная рекомендация</h3>
+          <p>Индивидуальный разбор вкусов и подбор 5 книг именно для вас.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-envelope-open-text badge-icon"></i>
+          <h3>Ежедневная рассылка</h3>
+          <p>Утром — отрывок из книги или совет. Заряжает на день.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-people-group badge-icon"></i>
+          <h3>Книжный клуб</h3>
+          <p>Закрытые встречи, обсуждаем новинки с авторами и переводчиками.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-crown badge-icon"></i>
+          <h3>Премиум-подписка</h3>
+          <p>Доступ к эксклюзивным лекциям и ранним версиям книг.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-briefcase badge-icon"></i>
+          <h3>Корпоративные решения</h3>
+          <p>Подборки для библиотек компаний и развития сотрудников.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-gift badge-icon"></i>
+          <h3>Подарочные сертификаты</h3>
+          <p>Дарите близким возможность выбрать идеальную книгу.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА 4: БЛОГ ========== -->
+    <div id="page-blog" class="page">
+      <h1>Блог Book Compass</h1>
+      
+      <!-- Telegram пост в блоге -->
+      <div class="card blog-card book-card" onclick="openTelegramBot()" style="cursor: pointer; margin-bottom: 2rem;">
+        <span class="genre-tag" style="background: #2AABEE; color: white;">🤖 Новинка</span>
+        <h2>Запуск Telegram бота! 🎉</h2>
+        <p class="book-author">@compass_books_bot • 15 марта 2025</p>
+        <p class="book-desc">Теперь вы можете читать книги прямо в Telegram! Бот имеет доступ к Project Gutenberg (70,000+ книг), Archive.org, Wikisource и другим легальным источникам. В разработке: рекомендации по настроению, книжные клубы и многое другое!</p>
+        <small>Нажмите, чтобы перейти →</small>
+      </div>
+
+      <div class="blog-grid">
+        <div class="card blog-card">
+          <span class="genre-tag">🔥 ТОП-10</span>
+          <h2>Топ‑10 книг 2024 года</h2>
+          <p>Самые обсуждаемые новинки: от Сары Джио до нового романа Виктора Пелевина.</p>
+          <button class="btn" onclick="gtag('event', 'blog_click', {'article': 'top10_2024'}); alert('Событие отправлено в Google Analytics!');">Читать статью →</button>
+        </div>
+        <div class="card blog-card">
+          <span class="genre-tag">💡 Советы</span>
+          <h2>Как читать больше книг</h2>
+          <p>5 простых шагов: аудиокниги, ритуалы, отказ от соцсетей и другие лайфхаки.</p>
+          <button class="btn" onclick="gtag('event', 'blog_click', {'article': 'how_to_read_more'}); alert('Событие отправлено в Google Analytics!');">Читать</button>
+        </div>
+        <div class="card blog-card">
+          <span class="genre-tag">🧭 Гид по жанрам</span>
+          <h2>Жанры книг: как найти свой</h2>
+          <p>Тест: определите ваш идеальный жанр за 2 минуты.</p>
+          <button class="btn" onclick="gtag('event', 'blog_click', {'article': 'genres_guide'}); alert('Событие отправлено в Google Analytics!');">Пройти тест</button>
+        </div>
+        <div class="card blog-card">
+          <span class="genre-tag">🎙️ Интервью</span>
+          <h2>Интервью с писателем</h2>
+          <p>Алексей Иванов о том, как рождаются сюжеты и почему Урал — место силы.</p>
+          <button class="btn" onclick="gtag('event', 'blog_click', {'article': 'interview_ivanov'}); alert('Событие отправлено в Google Analytics!');">Слушать/читать</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== СТРАНИЦА 5: КОНТАКТЫ ========== -->
+    <div id="page-contact" class="page">
+      <h1>Свяжитесь с нами</h1>
+      
+      <!-- Telegram в контактах -->
+      <div class="partner-block" style="background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%); margin-bottom: 2rem; cursor: pointer;" onclick="openTelegramBot()">
+        <i class="fab fa-telegram"></i>
+        <strong>@compass_books_bot</strong> — Быстрые ответы и поддержка 24/7 в Telegram
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-info">
+          <p><i class="fas fa-map-pin" style="color:#4d3cb0;"></i> Москва, ул. Книжная, д. 15, офис 401</p>
+          <p><i class="fas fa-phone-alt"></i> +7 (495) 221‑33‑44</p>
+          <p><i class="fas fa-envelope"></i> hello@bookcompass.ru</p>
+          <p><i class="fas fa-clock"></i> Режим работы: пн‑пт 10:00 – 19:00</p>
+          <div class="work-hours">
+            <p>📞 Служба поддержки: ежедневно с 9 до 21</p>
+          </div>
+        </div>
+        <div class="contact-form-block">
+          <p><i class="fas fa-paper-plane"></i> Напишите нам — мы отвечаем в течение часа.</p>
+          <button class="btn" onclick="gtag('event', 'contact_click', {'action': 'open_form'}); alert('Форма обратной связи (демо)');"><i class="fas fa-headset"></i> Открыть форму</button>
+          <p style="margin-top: 1rem; text-align: center;">
+            <a href="#" onclick="openTelegramBot(); return false;" style="color: #4d3cb0;">или напишите в Telegram →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Маленькая плавающая кнопка Telegram -->
+  <div class="telegram-mini-float" onclick="openTelegramBot()">
+    <i class="fab fa-telegram"></i>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="ga-footer">
+      <i class="fab fa-google"></i> Google Analytics активен · G-1RLF0NBYZE
+    </div>
+    <div>© 2025 Book Compass — лабораторная по веб-аналитике</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
