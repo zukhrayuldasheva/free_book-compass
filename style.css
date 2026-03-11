@@ -1,1 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f3ff;
+  color: #1e1a3a;
+  line-height: 1.5;
+}
+
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e6ff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #312b6e;
+}
+
+.logo i {
+  color: #5f4bdb;
+  font-size: 2.2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #34315e;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-bottom-color: #5f4bdb;
+  color: #312b6e;
+}
+
+.analytics-badge {
+  background: #f0eeff;
+  border-radius: 40px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3d348b;
+  border: 1px solid #cbc3ff;
+}
+
+.page-container {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 5% 3rem;
+  min-height: 60vh;
+}
+
+.page {
+  display: none;
+  animation: fade 0.3s ease;
+}
+
+.page.active-page {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #221d4a;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2f2963;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #332d6b;
+}
+
+.section-sub {
+  color: #625b97;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.grid-3,
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 2rem;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eceaff;
+  transition: 0.15s;
+}
+
+.card:hover {
+  border-color: #b1a4ff;
+  box-shadow: 0 18px 30px rgba(90, 65, 255, 0.07);
+}
+
+.badge-icon {
+  font-size: 2.2rem;
+  color: #4d3cb0;
+  margin-bottom: 1.2rem;
+}
+
+.footer {
+  background: #ffffffea;
+  border-top: 1px solid #e0daff;
+  padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #504b85;
+  font-size: 0.9rem;
+}
+
+.ga-footer {
+  background: #eeebff;
+  border-radius: 40px;
+  padding: 0.4rem 1.2rem;
+}
+
+.btn {
+  background: #4d3cb0;
+  color: white;
+  border: none;
+  padding: 0.9rem 2.2rem;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid #6b5acb;
+}
+
+.btn:hover {
+  background: #3b2d8f;
+  transform: scale(1.02);
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  background: #f8f7ff;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  border: 1px solid #ded9ff;
+}
+
+.contact-info {
+  flex: 2;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+}
+
+.contact-form-block {
+  flex: 1;
+  background: #e6e2ff;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.work-hours {
+  margin-top: 1.8rem;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed #cec7ff;
+  margin: 2rem 0;
+}
+
+.mission-block {
+  background: #e7e2ff;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  color: #242050;
+}
+
+.mission-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.genre-tag {
+  background: #edebff;
+  border-radius: 40px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  color: #342e6b;
+  display: inline-block;
+}
+
+.why-choose-us {
+  background: #efebff;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+}
+
+.category-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 280px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+}
+
+.about-quote {
+  flex: 1;
+  background: #dcd6ff;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.about-quote p {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.blog-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.blog-card {
+  padding: 2rem;
+}
+
+.blog-card h2 {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+}
+
+/* Дополнительные стили для книг и партнеров */
+.book-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(90, 65, 255, 0.15);
+}
+
+.book-author {
+    color: #625b97;
+    font-style: italic;
+    margin: 0.3rem 0;
+}
+
+.book-desc {
+    font-size: 0.9rem;
+    color: #4a457a;
+    margin: 0.8rem 0;
+}
+
+.book-card small {
+    display: block;
+    color: #4d3cb0;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.partner-block {
+    background: linear-gradient(135deg, #4d3cb0 0%, #6b5acb 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.partner-block i {
+    margin-right: 0.5rem;
+}
+
+.partner-block a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.partner-block a:hover {
+    text-decoration: none;
+}
+
+.contact-form-block a {
+    color: #4d3cb0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-form-block a:hover {
+    text-decoration: underline;
+}
+
+/* Минимальные дополнения для Telegram */
+.telegram-home-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #2AABEE;
+}
+
+.telegram-home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(42, 171, 238, 0.15);
+}
+
+.telegram-partner {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.telegram-partner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(42, 171, 238, 0.3);
+}
+
+.telegram-mini-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #2AABEE;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(42, 171, 238, 0.3);
+    transition: 0.2s;
+    z-index: 100;
+    font-size: 1.8rem;
+    opacity: 0.9;
+}
+
+.telegram-mini-float:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 6px 20px rgba(42, 171, 238, 0.4);
+}
+
+@media (max-width: 768px) {
+    .telegram-mini-float {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+}
